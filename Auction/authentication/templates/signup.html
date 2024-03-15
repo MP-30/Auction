@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 
-
 {% block title %}
-    Login
+    Signup
 {% endblock title %}
 {% block extra_css %}
     media="screen">
@@ -142,7 +141,7 @@ button{
         <div class="shape"></div>
     </div>
     <form>
-        <h3>Login Here</h3>
+        <h3>Signup Here</h3>
 
         <label for="username">Username</label>
         <input type="text" placeholder="Email or Phone" id="username">
@@ -152,9 +151,8 @@ button{
 
         <button>Log In</button>
         <div class="social">
-          <div class="go"><i class="fab fa-google"></i>  Google</div>
-          <a class="fb"  href="/signup" class="btn btn-primary">Signup</a>
-          {% comment %} <div class="fb"><i class="fab fa-facebook"></i>  Signup</div> {% endcomment %}
+            <a href="/signup" class="btn btn-primary">Signup</a>
+            <a href="/signup" class="btn btn-primary">Signup</a>
         </div>
     </form>
 {% endblock content %}

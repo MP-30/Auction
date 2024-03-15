@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    Item
+{% endblock title %}
+
+
+{% block extra_css %}
+    .container {
+            max-width: 1500px;
+            margin: 50px auto;
+            padding: 3px;
+            border:1px  solid grey;
+            background-color: #f0eee9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+{% endblock extra_css %}
+
+
+
+{% block content %}
+    <h2>All Items</h2>
+
+    <div class="container">
+        <table class="table table-striped">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Item Code</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">UOM</th>
+            <th scope="col">Item Group</th>
+            <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>Otto</td>
+            <td>Otto</td>
+            <td>Jacob</td>
+            </tr>
+            <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>@mdo</td>
+            <td>Thornton</td>
+            </tr>
+            <tr>
+            <th scope="row">3</th>
+            <td colspan="1">Larry the Bird</td>
+            <td>@twitter</td>
+            </tr>
+            <tr>
+            <th scope="row">4</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+            <td>@twitter</td>
+            <td>@fat</td>
+            </tr>
+            <tr>
+            <th scope="row">5</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>@mdo</td>
+            <td>Thornton</td>
+            
+            </tr>
+        </tbody>
+        </table>  
+    </div>
+  
+{% endblock content %}
