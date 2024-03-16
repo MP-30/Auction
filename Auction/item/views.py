@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .forms import ItemForm
-from .models import Item
+from .forms import *
+from .models import *
 from django.http import JsonResponse
 
 def item_create(request):
@@ -23,3 +23,15 @@ def list_items(request):
 #         results = [{'id': uom.id, 'label': uom:name} for uom in uoms]
 #         return JsonResponse({'error': 'Invalid request'}, status=400)
         
+def add_uom(request):
+    if request.method == 'POST':
+        form = UomForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('uom_list')
+    else:
+        form = UomForm()
+    return render(request,'uom.html/', {'form': form})
+        
+def uom_list(request):
+    return render(request,'uom_list.html')    
